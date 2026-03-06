@@ -1,7 +1,7 @@
 #include "HX711.h"
 
-const int LOADCELL_DOUT_PIN = 21;  // Data pin untuk ESP32
-const int LOADCELL_SCK_PIN = 22;   // Clock pin untuk ESP32
+const int LOADCELL_DOUT_PIN = 21; 
+const int LOADCELL_SCK_PIN = 22; 
 
 HX711 scale;
 int reading;
@@ -9,10 +9,10 @@ int lastReading;
 int read_button;
 
 #define CALIBRATION_FACTOR 450.753
-const int BUTTON_PIN = 4;  // Pin button untuk ESP32
+const int BUTTON_PIN = 4;  
 
 void setup() {
-  Serial.begin(115200);  // ESP32 lebih umum menggunakan 115200 baud rate
+  Serial.begin(115200);  
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   
   Serial.println("Inisialisasi timbangan");
